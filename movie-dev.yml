@@ -1,0 +1,30 @@
+server:
+    port: 8082
+spring: # 服務名稱，暫時沒用
+  application:
+    name: microservice-movie
+eureka:
+  client:
+    register-with-eureka: true # 作爲客戶端需要注冊到Eureka
+    fetch-registry: true # 作爲客戶端需要從Eureka獲取注冊信息
+    service-url:  # 客戶端注冊地址
+      defaultZone: http://127.0.0.1:8888/eureka # , http://127.0.0.1:9999/eureka
+    registry-fetch-interval-seconds: 5 # 修改提供方獲取注冊信息的間隔時間
+  instance:
+    prefer-ip-address: true # 優先使用該服務的ip地址注冊到Eureka
+# 修改Ribbon負載均衡算法
+#microservice-user:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+# 開啓Hystrix
+feign:
+  hystrix:
+    enabled: true
+
+# 熔断器DashBoard: actuator在boot2.0调整后开关web端点的配置，*代表开启所有
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
