@@ -3,6 +3,12 @@ server:
 spring: # 服務名稱，暫時沒用
   application:
     name: microservice-movie
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+        
 eureka:
   client:
     register-with-eureka: true # 作爲客戶端需要注冊到Eureka
