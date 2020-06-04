@@ -7,7 +7,7 @@ spring: # 服務名稱，暫時沒用
     name: microservice-user
   datasource:
     primary:
-        url: jdbc:mysql://localhost:3306/springcloud
+        jdbc-url: jdbc:mysql://localhost:3306/springcloud
         driverClassName: com.mysql.cj.jdbc.Driver
         username: root
         password: root
