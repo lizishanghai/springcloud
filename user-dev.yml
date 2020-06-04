@@ -1,4 +1,4 @@
-env: devtest
+env: test
 
 server:
     port: 8081
