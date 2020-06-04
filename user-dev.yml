@@ -9,7 +9,7 @@ spring: # 服務名稱，暫時沒用
     url: jdbc:mysql://localhost:3306/springcloud
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: root1
+    password: root
   jpa:
     database: mysql #鏈接的數據庫類型
     show-sql: true  #是否打印sql語句
