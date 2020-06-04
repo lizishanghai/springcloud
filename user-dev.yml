@@ -12,6 +12,12 @@ spring: # 服務名稱，暫時沒用
     database: mysql #鏈接的數據庫類型
     show-sql: true  #是否打印sql語句
     generate-ddl: true #是否自動建表
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    
 eureka:
   client:
     register-with-eureka: true # 作爲客戶端需要注冊到Eureka
