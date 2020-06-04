@@ -1,3 +1,5 @@
+env: devtest
+
 server:
     port: 8081
 spring: # 服務名稱，暫時沒用
